@@ -1,0 +1,51 @@
+<!--	Author: Eric Johnson
+		Date: 6/6/2020
+		Grantham University
+		CS208 Programming in JavaScript
+		Week 2 assignment: Conditional statements
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Show letter grade</title>
+	<script>
+		var entry = ''; // Create a variable to hold user input
+		var letterGrade = 'E'; // Create a variable to hold letter grade; note that the text called for "E" for failing grades, not "F"
+
+		do {
+			entry = prompt("Enter number grade from 0 through 100\nOr enter 999 to end entries"); // Take user input
+
+
+			if (isNaN(entry) == false && entry != '999' && parseFloat(entry) >= 0 && parseFloat(entry) <= 100)  // Data validation before generating letter grade
+			{
+				if (parseFloat(entry) >= 90)
+				{
+					letterGrade = 'A';
+				}
+				else if (parseFloat(entry) >= 80)
+				{
+					letterGrade = 'B';
+				}
+				else if (parseFloat(entry) >= 70)
+				{
+					letterGrade = 'C';
+				}
+				else if (parseFloat(entry) >= 60)
+				{
+					letterGrade = 'D';
+				}
+				alert("Number grade = " + entry + "\nLetter grade = " + letterGrade + "\n\nThanks for using Eric Johnson's Letter Grade Generator\n\n"); // Display letter grade
+			}
+		}
+		while (entry != '999');  // Loop exit condition
+	</script>
+</head>
+<body>
+	<main>
+    	<h1>Thanks for using Eric Johnson's Letter Grade Generator</h1>
+	</main>
+</body>
+</html>
