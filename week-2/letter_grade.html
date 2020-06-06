@@ -21,7 +21,7 @@
 
 			if (isNaN(entry) == false && entry != '999' && parseFloat(entry) >= 0 && parseFloat(entry) <= 100)  // Data validation before generating letter grade
 			{
-				if (parseFloat(entry) >= 90)
+				if (parseFloat(entry) >= 90)  // This decision tree compares the user entry to a numeric value to determine the appropriate letter grade.
 				{
 					letterGrade = 'A';
 				}
