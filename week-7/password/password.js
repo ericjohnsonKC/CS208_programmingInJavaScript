@@ -26,6 +26,21 @@ $(document).ready(function() {
         $("#password").val( "" ); // clear previous entry
     
         var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_-+!@";
+
+        // Get value entered by number, validate entry, generate password:
+        var entry = $("#num").val();
+        var password = "";
+
+        if ( isNaN(entry) ) {
+            alert("Please enter a valid number."); // Validates
+        } else {
+            entry = parseInt(entry);
+            for (let i = 0; i < entry; i++) {
+                password += chars[getRandomNumber(chars.length) -1]; // Generates password
+            }
+
+            $("#password").val(password); // Inserts password into html password field
+        }
         
     }); // end click()
     
