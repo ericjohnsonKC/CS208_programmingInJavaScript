@@ -42,6 +42,7 @@ $(document).ready(function() {
             $("#password").val(password); // Inserts password into html password field
         }
         
+        console.log(chars.length);
     }); // end click()
     
     $("#clear").click(function() {
